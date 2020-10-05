@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="content-container">
+    <ion-card class="card-style">
+      <ion-card-header>
+        <ion-card-title>Nova Audiência</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input type="number" placeholder="Número da Audiência" name="num" [(ngModel)]="courtHearing.num"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Data da Audiência" name="date" [(ngModel)]="courtHearing.date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Hora da Audiência" name="time" [(ngModel)]="courtHearing.time"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Nome do Advogado" name="lowyer" [(ngModel)]="courtHearing.lowyer"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Fórum Escolhido" name="forum" [(ngModel)]="courtHearing.forum"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Endereço do Fórum" name="adress" [(ngModel)]="courtHearing.adress"></ion-input>
+        </ion-item>
+        <ion-button class="btn-style" (click)="createCourtHearing()">Criar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

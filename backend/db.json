@@ -1,0 +1,61 @@
+{
+  "client": [
+    {
+      "user": "Admin",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "user": "",
+      "password": "",
+      "id": 2
+    }
+  ],
+  "courtHearings": [
+    {
+      "id": 1,
+      "num": 1234567,
+      "date": "14/06/99",
+      "time": "14:30",
+      "lowyer": "Marcelo",
+      "forum": "Uninove",
+      "adress": "R.São João, 109"
+    },
+    {
+      "id": 2,
+      "num": 2234567,
+      "date": "15/06/99",
+      "time": "14:31",
+      "lowyer": "Marcelo",
+      "forum": "Uninove",
+      "adress": "R.São João, 109"
+    },
+    {
+      "id": 3,
+      "num": 3234567,
+      "date": "16/06/99",
+      "time": "14:32",
+      "lowyer": "Marcelo",
+      "forum": "Uninove",
+      "adress": "R.São João, 109"
+    },
+    {
+      "num": 1234562,
+      "date": "34561",
+      "time": "23451",
+      "lowyer": "23451",
+      "forum": "234",
+      "adress": "12345",
+      "id": 4
+    },
+    {
+      "num": 12345,
+      "date": "1342354",
+      "time": "32",
+      "lowyer": "231",
+      "forum": "321",
+      "adress": "312",
+      "id": 5
+    }
+  ]
+}

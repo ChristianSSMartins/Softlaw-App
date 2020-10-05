@@ -1,0 +1,40 @@
+.login-container{
+    height: 100%;
+    display: flex;
+    background-color: #3c61b2;
+    flex-direction: column;
+    .img-container{
+        display: flex;
+        justify-content: center;
+        flex: 3;
+        align-items: center;
+    };
+    .input-container{
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        flex-direction: column;
+        .input-style{
+            border: solid 1px white;
+            margin: 0px 30px;
+        }
+        .ion-input-style{
+            background: white;
+            color: black;
+        }
+    };
+    .button-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 3;
+        .button-style {
+            width: 130px;
+        }
+    }
+}
+
+ion-button{
+    --border-color: white;
+    --color: white
+}

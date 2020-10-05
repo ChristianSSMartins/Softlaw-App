@@ -1,0 +1,27 @@
+<ion-header>
+  <div class="toolbar-container">
+    <div class="title-style">
+      Softlaw
+    </div>
+    <div>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <div class="list-container">
+      <a (click)="exit()">
+        <ion-item>
+          <ion-icon name="power-outline"></ion-icon>
+          <ion-label class="label-style">Sair</ion-label>
+        </ion-item>
+      </a>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+.content-container {
+    display: flex;
+    .card-container {
+        display: flex;
+        justify-content: center;
+        .space-style {
+            margin-left: 4px;
+        }
+    }
+}
+
+.margin {
+    margin-top: 46px;;
+}
+
+ion-card {
+    border-left: 6px solid #3c61b2;
+    border-radius: 3px;
+    width: 100%;
+}
+
+ion-card-header {
+    display: flex;
+    justify-content: space-between;
+}

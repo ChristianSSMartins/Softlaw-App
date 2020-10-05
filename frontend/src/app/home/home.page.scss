@@ -1,0 +1,33 @@
+.toolbar-container{
+  display: flex;
+  background-color: #3c61b2;
+  color: white;
+  height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  .title-style {
+    margin-left: 14px;
+    font-size: 19px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-style {
+  font-size: 18px;
+}
+
+ion-content {
+  --background: white;
+}
+
+ion-tab-bar {
+  --background: #3c61b2;
+}
+
+.color {
+  color: white;
+}

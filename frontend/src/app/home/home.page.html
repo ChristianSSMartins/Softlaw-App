@@ -1,0 +1,35 @@
+<ion-header>
+  <div class="toolbar-container">
+    <div class="title-style">
+      Softlaw
+    </div>
+    <div>
+      <ion-buttons slot="end">
+        <ion-button (click)="openModal()">
+          <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  
+</ion-content>
+
+<div class="footer-container">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="my-court-hearing" class="color">
+        <ion-icon name="calendar" class="icon-style"></ion-icon>
+        <ion-label>Minhas Audiências</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="new-court-hearing" class="color">
+        <ion-icon name="add"></ion-icon>
+        <ion-label>Criar Audiência</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</div>

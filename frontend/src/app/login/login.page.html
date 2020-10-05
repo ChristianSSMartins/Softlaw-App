@@ -1,0 +1,21 @@
+<ion-content>
+  <div class="login-container">
+    <div class="img-container">
+      <img src="../../assets/logo.png" />
+    </div>
+    <div class="input-container">
+      <div class="input-style">
+        <ion-input class="ion-input-style" placeholder="Usuário" name="user" [(ngModel)]="client.user"></ion-input>
+      </div>
+      <div class="input-style">
+        <ion-input class="ion-input-style" type="password" placeholder="Senha" name="password" [(ngModel)]="client.password"></ion-input>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="button-container">
+        <ion-button fill="outline"  (click)="auth(client)" class="button-style">Entrar</ion-button>
+        <ion-button fill="outline" (click)="createUser()" class="button-style">Cadastrar</ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,22 @@
+.toolbar-container{
+    display: flex;
+    background-color: #3c61b2;
+    color: white;
+    height: 45px;
+    align-items: center;
+    justify-content: space-between;
+    .title-style {
+        margin-left: 14px;
+        font-size: 19px;
+      }
+}
+
+.content-container {
+  display: flex;
+  .list-container {
+    display: flex;
+    .label-style {
+      margin-left: 6px;
+    }
+  }
+}

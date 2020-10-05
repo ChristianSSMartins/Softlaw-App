@@ -1,0 +1,43 @@
+<div class="margin"></div>
+<ion-content class="content-container">
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content 
+        pullingIcon="arrow-dropdown"
+        refreshingSpinner="circles"
+        refreshingText="Carregando..."></ion-refresher-content>
+      </ion-refresher>
+    <div class="card-container" *ngFor="let courtHearing of courtHearings">
+        <ion-card class="card-style">
+            <ion-card-header>
+                <ion-card-subtitle>{{ courtHearing.id }}º</ion-card-subtitle>
+                <ion-card-title>Audiência</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item>
+                    <p>N.º</p>
+                    <p class="space-style">{{ courtHearing.num }}</p>
+                </ion-item>
+                <ion-item>
+                    <p>Data:</p>
+                    <p class="space-style">{{ courtHearing.date }}</p>
+                </ion-item>
+                <ion-item>
+                    <p>Hora:</p>
+                    <p class="space-style">{{ courtHearing.time }}</p>
+                </ion-item>
+                <ion-item>
+                    <p>Advogado:</p>
+                    <p class="space-style">{{ courtHearing.lowyer }}</p>
+                </ion-item>
+                <ion-item>
+                    <p>Fórum:</p>
+                    <p class="space-style">{{ courtHearing.forum }}</p>
+                </ion-item>
+                <ion-item>
+                    <p>Endereço:</p>
+                    <p class="space-style">{{ courtHearing.adress }}</p>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>
