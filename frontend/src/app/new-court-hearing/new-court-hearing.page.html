@@ -6,22 +6,22 @@
       </ion-card-header>
       <ion-card-content>
         <ion-item>
-          <ion-input type="number" placeholder="Número da Audiência" name="num" [(ngModel)]="courtHearing.num"></ion-input>
+          <ion-input type="number" placeholder="Número da Audiência" name="num" id="num" clearInput="true" [(ngModel)]="courtHearing.num"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Data da Audiência" name="date" [(ngModel)]="courtHearing.date"></ion-input>
+          <ion-input type="date" name="date" placeholder="Data da Audiência" clearInput="true" [(ngModel)]="courtHearing.date"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Hora da Audiência" name="time" [(ngModel)]="courtHearing.time"></ion-input>
+          <ion-input type="time" name="time" placeholder="Hora da Audiência" clearInput="true" [(ngModel)]="courtHearing.time"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Nome do Advogado" name="lowyer" [(ngModel)]="courtHearing.lowyer"></ion-input>
+          <ion-input type="text" placeholder="Nome do Advogado" name="lowyer" clearInput="true" [(ngModel)]="courtHearing.lowyer"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Fórum Escolhido" name="forum" [(ngModel)]="courtHearing.forum"></ion-input>
+          <ion-input type="text" placeholder="Fórum Escolhido" name="forum" clearInput="true" [(ngModel)]="courtHearing.forum"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Endereço do Fórum" name="adress" [(ngModel)]="courtHearing.adress"></ion-input>
+          <ion-input placeholder="Endereço do Fórum" name="adress" clearInput="true" [(ngModel)]="courtHearing.adress"></ion-input>
         </ion-item>
         <ion-button class="btn-style" (click)="createCourtHearing()">Criar</ion-button>
       </ion-card-content>

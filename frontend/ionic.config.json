@@ -1,5 +1,7 @@
 {
-  "name": "app_facu",
-  "integrations": {},
+  "name": "SoftLaw",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

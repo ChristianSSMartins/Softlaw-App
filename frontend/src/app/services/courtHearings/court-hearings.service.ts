@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CourtHearingsService {
 
-  baseUrl = 'http://localhost:3001/courtHearings';
+  baseUrl = 'http://192.168.1.103:8080/courtHearings';
 
   constructor(private http: HttpClient) { }
 
