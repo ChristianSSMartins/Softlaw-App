@@ -20,4 +20,18 @@ export class CourtHearingsService {
     return this.http.get<CourtHearing[]>(this.baseUrl);
   }
 
+  // readById(id: string): Observable<CourtHearing> {
+  //   const url = `${this.baseUrl}/${id}`;
+  //   return this.http.get<CourtHearing>(url);
+  // }
+
+  // update(courtHearing: CourtHearing): Observable<CourtHearing> {
+  //   const url = `${this.baseUrl}/${courtHearing.id}`;
+  //   return this.http.put<CourtHearing>(url, courtHearing);
+  // }
+
+  delete(id: string): Observable<CourtHearing> {
+    const idUrl = `${this.baseUrl}/${id}`;
+    return this.http.delete<CourtHearing>(idUrl);
+  }
 }

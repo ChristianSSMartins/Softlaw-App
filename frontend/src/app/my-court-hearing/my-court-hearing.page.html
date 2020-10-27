@@ -7,7 +7,7 @@
         refreshingText="Carregando..."></ion-refresher-content>
       </ion-refresher>
     <div class="card-container" *ngFor="let courtHearing of courtHearings">
-        <ion-card class="card-style">
+        <ion-card>
             <ion-card-header>
                 <ion-card-subtitle>{{ courtHearing.id }}º</ion-card-subtitle>
                 <ion-card-title>Audiência</ion-card-title>
@@ -37,6 +37,7 @@
                     <p>Endereço:</p>
                     <p class="space-style">{{ courtHearing.adress }}</p>
                 </ion-item>
+                <ion-button class="btn-style" (click)="deleteCourtHearing(courtHearing.id, courtHearing.num)">Excluir</ion-button>
             </ion-card-content>
         </ion-card>
     </div>

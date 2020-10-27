@@ -1,29 +1,20 @@
 {
   "client": [
     {
-      "user": "Christian",
-      "password": "Souza",
+      "user": "admin",
+      "password": "admin",
       "id": 1
     }
   ],
   "courtHearings": [
     {
-      "id": 1,
-      "num": 1234567,
-      "date": "14/06/99",
-      "time": "14:30",
-      "lowyer": "Marcelo",
-      "forum": "Uninove",
-      "adress": "R.São João, 109"
-    },
-    {
-      "num": 123456,
-      "date": "2020-10-23",
-      "time": "21:17",
-      "lowyer": "Josiane",
-      "forum": "Uninove",
-      "adress": "Rua São Marcos, 230",
-      "id": 2
+      "num": 12312,
+      "date": "0213-03-21",
+      "time": "21:32",
+      "lowyer": "13213",
+      "forum": "123213",
+      "adress": "213123",
+      "id": 1
     }
   ]
 }
