@@ -15,8 +15,16 @@
   display: flex;
   .list-container {
     display: flex;
-    .label-style {
-      margin-left: 6px;
+    width: 100%;
+    margin-right: 15px;
+    .link-style {
+      width: 100%;
+      .item-style {
+        width: 100%;
+        .label-style {
+          margin-left: 6px;
+        }
+      }
     }
   }
 }

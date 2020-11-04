@@ -9,13 +9,13 @@
           <ion-input type="number" placeholder="Número da Audiência" name="num" id="num" clearInput="true" [(ngModel)]="courtHearing.num"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" name="date" placeholder="Data da Audiência" clearInput="true" ontouchstart="(this.type='date')" ontouchend="(this.type='text')" [(ngModel)]="courtHearing.date"></ion-input>
+          <ion-input type="text" name="date" id="date" placeholder="Data da Audiência" clearInput="true" ontouchstart="(this.type='date')" [(ngModel)]="courtHearing.date"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" name="time" placeholder="Hora da Audiência" clearInput="true" ontouchstart="(this.type='time')" ontouchend="(this.type='text')" [(ngModel)]="courtHearing.time"></ion-input>
+          <ion-input type="text" name="time" id="time" placeholder="Hora da Audiência" clearInput="true" ontouchstart="(this.type='time')" [(ngModel)]="courtHearing.time"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" placeholder="Nome do Advogado" name="lowyer" clearInput="true" [(ngModel)]="courtHearing.lowyer"></ion-input>
+          <ion-input type="text" placeholder="Nome do Advogado" name="lawyer" clearInput="true" [(ngModel)]="courtHearing.lawyer"></ion-input>
         </ion-item>
         <ion-item>
           <ion-input type="text" placeholder="Fórum Escolhido" name="forum" clearInput="true" [(ngModel)]="courtHearing.forum"></ion-input>

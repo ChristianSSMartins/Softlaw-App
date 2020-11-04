@@ -14,7 +14,7 @@ export class NewCourtHearingPage implements OnInit {
     num: null,
     date: '',
     time: '',
-    lowyer: '',
+    lawyer: '',
     forum: '',
     adress: ''
   };
@@ -32,9 +32,11 @@ export class NewCourtHearingPage implements OnInit {
     this.courtHearing.num = null;
     this.courtHearing.date = null;
     this.courtHearing.time = null;
-    this.courtHearing.lowyer = null;
+    this.courtHearing.lawyer = null;
     this.courtHearing.forum = null;
     this.courtHearing.adress = null;
+    document.getElementById('date').setAttribute('type', 'text');
+    document.getElementById('time').setAttribute('type', 'text');
   }
 
   // updateCourtHearing(): void { }

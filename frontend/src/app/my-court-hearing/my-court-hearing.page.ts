@@ -41,7 +41,7 @@ export class MyCourtHearingPage implements OnInit {
       this.courtHearing = courtHearing;
       setTimeout(() => {
         this.ngOnInit();
-      }, 1000);
+      }, 500);
       this.deleteAlert();
     });
   }

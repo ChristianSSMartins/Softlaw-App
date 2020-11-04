@@ -3,7 +3,7 @@ export interface CourtHearing {
     num: number;
     date: string;
     time: string;
-    lowyer: string;
+    lawyer: string;
     forum: string;
     adress: string;
 }
