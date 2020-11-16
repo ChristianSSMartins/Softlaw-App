@@ -1,0 +1,32 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    .button-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .btn-update-style {
+            margin-top: 30px;
+            width: 100px;
+        }
+        .btn-cancel-style {
+            margin-top: 30px;
+            width: 100px;
+        }
+    }
+}
+
+ion-card {
+    border-left: 6px solid #3c61b2;
+    border-radius: 3px;
+    margin-top: 60px;
+}
+
+ion-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+ion-button {
+    --background: #3c61b2;
+}

@@ -1,3 +1,4 @@
+import { CryptoService } from './../services/cryptography/crypto.service';
 import { LoginService } from './../services/login/login.service';
 import { Client } from './../models/client.model';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,6 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-
   client: Client = {
     user: '',
     password: ''
@@ -20,7 +20,8 @@ export class LoginPage implements OnInit {
   constructor(
     private router: Router,
     private loginService: LoginService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private cryptoService: CryptoService
   ) {
 
   }
@@ -56,31 +57,49 @@ export class LoginPage implements OnInit {
     await alert.present();
   }
 
+  async voidAlert() {
+    const alert = await this.alertController.create({
+      header: `Informe um login e uma senha!`,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
   auth(client: Client) {
     let ret: boolean;
-    this.loginService.get().subscribe(res => {
-      res.map(ev => {
-        if (client.user === ev.user && client.password === ev.password) {
-          return ret = true;
+    if (this.client.user === '' && this.client.password === '') {
+      this.voidAlert();
+    } else {
+      this.loginService.get().subscribe(res => {
+        res.map(ev => {
+          ev.password = this.cryptoService.decrypt(ev.password);
+          if (client.user === ev.user && client.password === ev.password) {
+            return ret = true;
+          } else {
+            return ret = false;
+          }
+        });
+        if (ret === true) {
+          this.router.navigate(['/home']);
+          this.welcomeAlert();
         } else {
-          return ret = false;
+          this.errorAlert();
         }
       });
-      if (ret === true) {
-        this.router.navigate(['/home']);
-        this.welcomeAlert();
-      } else {
-        this.errorAlert();
-      }
-    });
+    }
   }
 
   createUser(): void {
-    this.loginService.create(this.client).subscribe(() => {
-      this.router.navigate(['/login']);
-      this.registerAlert();
-    });
+    if (this.client.user === '' && this.client.password === '') {
+      this.voidAlert();
+    } else {
+      this.loginService.create(this.client).subscribe(() => {
+        this.registerAlert();
+        this.router.navigate(['/login']);
+        this.client.user = '';
+        this.client.password = '';
+      });
+    }
   }
-
 }
-

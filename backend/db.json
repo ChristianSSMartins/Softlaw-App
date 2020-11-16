@@ -2,18 +2,33 @@
   "client": [
     {
       "user": "admin",
-      "password": "admin",
+      "password": "U2FsdGVkX1/1kC1daexSsaYbwvdrWSrMHaHsUdTbfl0=",
       "id": 1
+    },
+    {
+      "user": "a",
+      "password": "U2FsdGVkX1+CPbu8ubW2idwBabk5k4sEzSRBSxCDM8A=",
+      "id": 2
+    },
+    {
+      "user": "a",
+      "password": "U2FsdGVkX19dlRru4BI7zPIk2Xtok4Grt0aa0zIPWJ8=",
+      "id": 3
+    },
+    {
+      "user": "admin",
+      "password": "U2FsdGVkX1/LbtmOhWfWjs7Fx5wFOUSY93vXzTLuIVM=",
+      "id": 4
     }
   ],
   "courtHearings": [
     {
-      "num": 40028922,
-      "date": "2020-10-30",
-      "time": "13:29",
-      "lawyer": "Christian",
-      "forum": "Uninove",
-      "adress": "R.São João, 109",
+      "num": 1,
+      "date": "2020-11-11",
+      "time": "13:48",
+      "lawyer": "qqjaja",
+      "forum": "ahhaa",
+      "adress": "abaha",
       "id": 1
     }
   ]

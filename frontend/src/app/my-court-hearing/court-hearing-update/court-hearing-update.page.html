@@ -2,36 +2,40 @@
   <div class="content-container">
     <ion-card class="card-style">
       <ion-card-header>
-        <ion-card-title>Nova Audiência</ion-card-title>
+        <ion-card-title>Alterar Audiência</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <form>
           <ion-item>
             <ion-input type="number" placeholder="Número da Audiência" name="num" id="num" clearInput="true"
-              [(ngModel)]="courtHearing.num"></ion-input>
+              ([ngModel])="courtHearing.num">
+            </ion-input>
           </ion-item>
           <ion-item>
             <ion-input type="text" name="date" id="date" placeholder="Data da Audiência" clearInput="true"
-              ontouchstart="(this.type='date')" [(ngModel)]="courtHearing.date"></ion-input>
+              ontouchstart="(this.type='date')" ([ngModel])="courtHearing.date"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input type="text" name="time" id="time" placeholder="Hora da Audiência" clearInput="true"
-              ontouchstart="(this.type='time')" [(ngModel)]="courtHearing.time"></ion-input>
+              ontouchstart="(this.type='time')" ([ngModel])="courtHearing.time"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input type="text" placeholder="Nome do Advogado" name="lawyer" clearInput="true"
-              [(ngModel)]="courtHearing.lawyer"></ion-input>
+              ([ngModel])="courtHearing.lawyer"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input type="text" placeholder="Fórum Escolhido" name="forum" clearInput="true"
-              [(ngModel)]="courtHearing.forum"></ion-input>
+              ([ngModel])="courtHearing.forum"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input placeholder="Endereço do Fórum" name="adress" clearInput="true"
-              [(ngModel)]="courtHearing.adress"></ion-input>
+              ([ngModel])="courtHearing.adress"></ion-input>
           </ion-item>
         </form>
-        <ion-button class="btn-style" (click)="createCourtHearing()">Criar</ion-button>
+        <div class="button-container">
+          <ion-button class="btn-update-style" (click)="updateCourtHearing()">Salvar</ion-button>
+          <ion-button class="btn-cancel-style" (click)="backPage()">Calcelar</ion-button>
+        </div>
       </ion-card-content>
     </ion-card>
   </div>

@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CourtHearing } from './../../models/courtHearing.model';
 import { Injectable } from '@angular/core';
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class CourtHearingsService {
 
-  baseUrl = 'http://192.168.1.104:8080/courtHearings';
+  baseUrl = 'http://192.168.1.103:8080/courtHearings';
 
   constructor(private http: HttpClient) { }
 
@@ -20,15 +21,15 @@ export class CourtHearingsService {
     return this.http.get<CourtHearing[]>(this.baseUrl);
   }
 
-  // readById(id: string): Observable<CourtHearing> {
-  //   const url = `${this.baseUrl}/${id}`;
-  //   return this.http.get<CourtHearing>(url);
-  // }
+  readById(id: string): Observable<CourtHearing> {
+    const idUrl = `${this.baseUrl}/${id}`;
+    return this.http.get<CourtHearing>(idUrl);
+  }
 
-  // update(courtHearing: CourtHearing): Observable<CourtHearing> {
-  //   const url = `${this.baseUrl}/${courtHearing.id}`;
-  //   return this.http.put<CourtHearing>(url, courtHearing);
-  // }
+  update(courtHearing: CourtHearing): Observable<CourtHearing> {
+    const idUrl = `${this.baseUrl}/${courtHearing.id}`;
+    return this.http.put<CourtHearing>(idUrl, courtHearing);
+  }
 
   delete(id: string): Observable<CourtHearing> {
     const idUrl = `${this.baseUrl}/${id}`;

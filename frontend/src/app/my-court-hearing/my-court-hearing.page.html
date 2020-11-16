@@ -1,11 +1,9 @@
 <div class="margin"></div>
 <ion-content class="content-container">
     <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-        <ion-refresher-content 
-        pullingIcon="arrow-dropdown"
-        refreshingSpinner="circles"
-        refreshingText="Carregando..."></ion-refresher-content>
-      </ion-refresher>
+        <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Carregando...">
+        </ion-refresher-content>
+    </ion-refresher>
     <div class="card-container" *ngFor="let courtHearing of courtHearings">
         <ion-card>
             <ion-card-header>
@@ -37,7 +35,10 @@
                     <p>Endereço:</p>
                     <p class="space-style">{{ courtHearing.adress }}</p>
                 </ion-item>
-                <ion-button class="btn-style" (click)="deleteCourtHearing(courtHearing.id, courtHearing.num)">Excluir</ion-button>
+                <div class="button-container">
+                    <ion-button class="btn-style" (click)="deleteCourtHearing(courtHearing.id)">Excluir</ion-button>
+                    <ion-button class="btn-update-style" (click)="goUpdate(courtHearing.id)">Editar</ion-button>
+                </div>
             </ion-card-content>
         </ion-card>
     </div>

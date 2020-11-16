@@ -1,3 +1,4 @@
+import { CryptoService } from './../cryptography/crypto.service';
 import { Client } from './../../models/client.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -8,11 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  baseUrl = 'http://192.168.1.104:8080/client';
+  baseUrl = 'http://192.168.1.103:8080/client';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cryptoService: CryptoService) { }
 
   create(user: Client): Observable<Client> {
+    user.password = this.cryptoService.encrypt(user.password);
     return this.http.post<Client>(this.baseUrl, user);
   }
 

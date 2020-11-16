@@ -46,6 +46,13 @@ export class MyCourtHearingPage implements OnInit {
     });
   }
 
+  goUpdate(id): void {
+    this.courtHearingsService.readById(id).subscribe(courtHearing => {
+      this.courtHearing = courtHearing;
+      this.router.navigate([`/home/my-court-hearing/update/${id}`]);
+    });
+  }
+
   refresh(event) {
     setTimeout(() => {
       event.target.complete();

@@ -6,10 +6,19 @@
         .space-style {
             margin-left: 4px;
         }
-        .btn-style {
-            // margin-left: 200px;
-            margin-top: 30px;
-            width: 100px;
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .btn-style {
+                margin-top: 30px;
+                width: 100px;
+            }
+            .btn-update-style {
+                margin-top: 30px;
+                width: 100px;
+                
+            }
         }
     }
 }
