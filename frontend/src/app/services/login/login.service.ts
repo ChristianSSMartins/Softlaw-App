@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  baseUrl = 'http://192.168.1.103:8080/client';
+  baseUrl = 'http://192.168.1.102:8080/client';
 
   constructor(private http: HttpClient, private cryptoService: CryptoService) { }
 

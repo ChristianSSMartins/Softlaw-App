@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { CourtHearingsService } from './../services/courtHearings/court-hearings.service';
 import { Component, OnInit } from '@angular/core';
 import { CourtHearing } from '../models/courtHearing.model';
@@ -25,6 +25,7 @@ export class MyCourtHearingPage implements OnInit {
 
   ionViewWillEnter() {
     this.ngOnInit();
+    console.log('teste');
 }
 
   async deleteAlert() {
@@ -47,9 +48,15 @@ export class MyCourtHearingPage implements OnInit {
   }
 
   goUpdate(id): void {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        // tslint:disable-next-line: object-literal-shorthand
+        id: id
+      }
+    };
     this.courtHearingsService.readById(id).subscribe(courtHearing => {
       this.courtHearing = courtHearing;
-      this.router.navigate([`/home/my-court-hearing/update/${id}`]);
+      this.router.navigate(['update-court'], navigationExtras);
     });
   }
 

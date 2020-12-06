@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --host 192.168.1.103 --watch db.json --port 8080"
+    "start": "json-server --host 192.168.1.102 --watch db.json --port 8080"
   },
   "keywords": [],
   "author": "",

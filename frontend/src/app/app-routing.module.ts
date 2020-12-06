@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'exit',
     loadChildren: () => import('./modal/exit/exit.module').then( m => m.ExitPageModule)
+  },
+  {
+    path: 'update-court',
+    loadChildren: () => import('./update-court/update-court.module').then( m => m.UpdateCourtPageModule)
   }
 ];
 

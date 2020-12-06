@@ -1,0 +1,58 @@
+<ion-header>
+  <div class="toolbar-container">
+    <div class="title-style">
+      Softlaw
+    </div>
+    <div>
+      <ion-buttons slot="end">
+        <ion-button (click)="openModal()">
+          <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+</ion-header>
+
+
+<ion-content>
+  <div class="content-container">
+    <ion-card class="card-style">
+      <ion-card-header>
+        <ion-card-title>Alterar Audiência</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-item>
+            <ion-input type="number" placeholder="Número da Audiência" name="num" id="num" 
+              [(ngModel)]="num">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" name="date" id="date" placeholder="Data da Audiência"
+              ontouchstart="(this.type='date')" [(ngModel)]="date"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" name="time" id="time" placeholder="Hora da Audiência" 
+              ontouchstart="(this.type='time')" [(ngModel)]="time"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Nome do Advogado" name="lawyer"
+            [(ngModel)]="lawyer"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Fórum Escolhido" name="forum"
+            [(ngModel)]="forum"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Endereço do Fórum" name="adress"
+            [(ngModel)]="adress"></ion-input>
+          </ion-item>
+        </form>
+        <div class="button-container">
+          <ion-button class="btn-update-style" (click)="updateCourtHearing()">Salvar</ion-button>
+          <ion-button class="btn-cancel-style" (click)="backPage()">Calcelar</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

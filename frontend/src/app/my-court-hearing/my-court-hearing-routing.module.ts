@@ -13,8 +13,8 @@ const routes: Routes = [
     component: CourtHearingUpdatePage
   },
   {
-    path: 'court-hearing-update',
-    loadChildren: () => import('./court-hearing-update/court-hearing-update.page').then( m => m.CourtHearingUpdatePage)
+    path: 'update-court',
+    loadChildren: () => import('../update-court/update-court.page').then( m => m.UpdateCourtPage)
   }
 ];
 

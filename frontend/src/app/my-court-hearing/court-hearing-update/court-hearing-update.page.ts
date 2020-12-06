@@ -1,7 +1,7 @@
-import { CourtHearingsService } from './../../services/courtHearings/court-hearings.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CourtHearing } from 'src/app/models/courtHearing.model';
+import { CourtHearingsService } from 'src/app/services/courtHearings/court-hearings.service';
 
 @Component({
   selector: 'app-court-hearing-update',
